@@ -1,4 +1,4 @@
-package gtl;
+package demotest;
 
 import com.ea.framework.base.*;
 import com.ea.framework.config.ConfigReader;
@@ -8,13 +8,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
-import javax.swing.plaf.ColorUIResource;
-
-import static com.ea.framework.base.Base.CurrentPage;
 import java.io.IOException;
 
 
-public class GtlTest extends BasePage {
+public class DemoTest extends BasePage {
 
 	@BeforeMethod(alwaysRun = true )
 	public void setUp() throws IOException {
