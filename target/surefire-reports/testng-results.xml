@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-05T08:12:43Z" name="Regression" finished-at="2023-03-05T08:13:15Z" duration-ms="31917">
+    <groups>
+    </groups>
+    <test started-at="2023-03-05T08:12:43Z" name="Test - 2" finished-at="2023-03-05T08:12:59Z" duration-ms="15295">
+      <class name="gtl.GtlTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:12:43Z" name="beforeSuite" finished-at="2023-03-05T08:12:43Z" duration-ms="503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="initializedData()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:12:43Z" name="initializedData" finished-at="2023-03-05T08:12:51Z" duration-ms="8066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializedData -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:12:51Z" name="setUp" finished-at="2023-03-05T08:12:57Z" duration-ms="5749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test2()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:12:57Z" name="test2" finished-at="2023-03-05T08:12:58Z" duration-ms="1344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:12:58Z" name="tearDown" finished-at="2023-03-05T08:12:59Z" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:gtl.GtlTest@503d687a]" started-at="2023-03-05T08:13:15Z" name="afterSuite" finished-at="2023-03-05T08:13:17Z" duration-ms="1966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- gtl.GtlTest -->
+    </test> <!-- Test - 2 -->
+    <test started-at="2023-03-05T08:12:43Z" name="Test - 1" finished-at="2023-03-05T08:13:15Z" duration-ms="31917">
+      <class name="gtl.GtlTest">
+        <test-method is-config="true" signature="initializedData()[pri:0, instance:gtl.GtlTest@46fa7c39]" started-at="2023-03-05T08:12:43Z" name="initializedData" finished-at="2023-03-05T08:12:51Z" duration-ms="8066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializedData -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:gtl.GtlTest@46fa7c39]" started-at="2023-03-05T08:12:51Z" name="setUp" finished-at="2023-03-05T08:13:02Z" duration-ms="10650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test1()[pri:0, instance:gtl.GtlTest@46fa7c39]" started-at="2023-03-05T08:13:02Z" name="test1" finished-at="2023-03-05T08:13:15Z" duration-ms="13048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:gtl.GtlTest@46fa7c39]" started-at="2023-03-05T08:13:15Z" name="tearDown" finished-at="2023-03-05T08:13:15Z" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- gtl.GtlTest -->
+    </test> <!-- Test - 1 -->
+  </suite> <!-- Regression -->
+</testng-results>

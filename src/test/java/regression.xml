@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" thread-count="2">
+    <test name="Test - 1" parallel="tests">
+        <classes>
+            <class name="gtl.GtlTest">
+                <methods>
+                    <include name="test1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test - 2" parallel="tests">
+        <classes>
+            <class name="gtl.GtlTest">
+                <methods>
+                    <include name="test2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
