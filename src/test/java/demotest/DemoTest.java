@@ -9,12 +9,13 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 
 public class DemoTest extends BasePage {
 
 	@BeforeMethod(alwaysRun = true )
-	public void setUp() throws IOException {
+	public void setUp() throws IOException, URISyntaxException {
 		System.out.println("hiiiiii");
 		FrameworkInitialize.InitializeBrowser(Settings.BrowserType);
 		ConfigReader.PopulateSettings();
@@ -30,17 +31,19 @@ public class DemoTest extends BasePage {
         ExtentReport.createTest("login link clicl success");
 		HomePage hp=new HomePage(LocalDriverContext.getRemoteWebDriver());
 		hp.ClickLogin();
-
-		Thread.sleep(12000);
-
+		Thread.sleep(2000);
+		hp.enterUsername();
+		hp.enterPassword();
+		Thread.sleep(2000);
 	}
 	@Test
-	public void test2()
-	{
+	public void test2() throws InterruptedException {
 		ExtentReport.createTest("login link clicl success for test2");
 		HomePage hp=new HomePage(LocalDriverContext.getRemoteWebDriver());
 		hp.ClickLogin();
-
+		hp.enterUsername();
+		hp.enterPassword();
+		Thread.sleep(2000);
 	}
 
 

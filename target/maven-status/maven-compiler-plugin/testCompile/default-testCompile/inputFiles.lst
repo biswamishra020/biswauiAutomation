@@ -1,9 +1,10 @@
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/steps/LoginSteps.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/pages/HomePage.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/pages/LoginPage.java
-/Users/biswamishra/Downloads/UI_Automation/src/test/java/gtl/GtlTest.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/pages/CreateEmployeePage.java
+/Users/biswamishra/Downloads/UI_Automation/src/test/java/demotest/DemoTest.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/runner/TestRunner.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/steps/TestInitialize.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/steps/EmployeeSteps.java
 /Users/biswamishra/Downloads/UI_Automation/src/test/java/pages/EmployeeListPage.java
+/Users/biswamishra/Downloads/UI_Automation/src/test/java/demotest/Demo2Test.java

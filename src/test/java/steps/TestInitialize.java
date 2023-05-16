@@ -12,6 +12,7 @@ import cucumber.api.java.Before;
 
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  * Created by Karthik-pc on 12/4/2018.
@@ -20,7 +21,7 @@ public class TestInitialize extends FrameworkInitialize {
 
 
     @Before
-    public void Initialize() throws IOException {
+    public void Initialize() throws IOException, URISyntaxException {
         //Initialize Config
         ConfigReader.PopulateSettings();
 

@@ -1,9 +1,10 @@
 steps/LoginSteps.class
 runner/TestRunner.class
+demotest/Demo2Test.class
 pages/EmployeeListPage.class
 pages/CreateEmployeePage.class
 steps/TestInitialize.class
 pages/HomePage.class
 steps/EmployeeSteps.class
-gtl/GtlTest.class
+demotest/DemoTest.class
 pages/LoginPage.class

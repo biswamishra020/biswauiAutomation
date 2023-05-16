@@ -23,6 +23,12 @@ public class HomePage extends BasePage {
     @FindBy(how = How.LINK_TEXT, using = "Login")
     public WebElement lnkLogin;
 
+    @FindBy(how = How.ID, using = "UserName")
+    public WebElement userName;
+
+    @FindBy(how = How.ID, using = "Password")
+    public WebElement passWord;
+
     @FindBy(how = How.LINK_TEXT, using = "Employee List")
     public WebElement lnkEmployeeList;
 
@@ -35,6 +41,20 @@ public class HomePage extends BasePage {
         System.out.println("hiiii login");
         lnkLogin.click();
         ExtentReport.test.pass("login clicked");
+        //return GetInstance(LoginPage.class);
+    }
+
+    public void enterUsername() {
+
+        userName.sendKeys("biswa");
+        ExtentReport.test.pass("user name  entered");
+        //return GetInstance(LoginPage.class);
+    }
+
+    public void enterPassword() {
+
+        passWord.sendKeys("test");
+        ExtentReport.test.pass("pwd   entered");
         //return GetInstance(LoginPage.class);
     }
 

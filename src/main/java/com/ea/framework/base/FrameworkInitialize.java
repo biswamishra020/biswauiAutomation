@@ -12,9 +12,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
@@ -23,7 +26,7 @@ import java.net.URL;
 public class FrameworkInitialize extends Base {
 
 
-    public static void InitializeBrowser(BrowserType browserType) throws IOException {
+    public static void InitializeBrowser(BrowserType browserType) throws IOException, URISyntaxException {
         ConfigReader.PopulateSettings();
         RemoteWebDriver driver; ;
         switch (browserType)
@@ -32,31 +35,32 @@ public class FrameworkInitialize extends Base {
             {
                 System.out.println("executing in chrome");
                String userdir=System.getProperty("user.dir");
-                System.setProperty("webdriver.chrome.driver",userdir+"/driver/chromedriver");
+               //System.setProperty("webdriver.chrome.driver",userdir+"/driver/chromedriver");
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("–ignore-ssl-errors=yes");
 //                options.addArguments("platform=Linux");
-//                options.addArguments("version=latest");
-                options.addArguments("–ignore-certificate-errors");
-                options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--no-sandbox");
-               // options.setHeadless(true);
+               // options.addArguments("version=latest");
+                options.addArguments("--remote-allow-origins=*");
+               // options.addArguments("–ignore-certificate-errors");
+               // options.addArguments("--disable-dev-shm-usage");
+               // options.addArguments("--no-sandbox");
+               // options.setHeadless(true)
                 WebDriverManager.chromedriver().setup();
                // driver=new ChromeDriver(options);
                // System.out.println(Settings.SeleniumGridHub+ "------------");
-                String currentIP=CommonUtil.getIpAddress();
-                driver= new RemoteWebDriver(new URL("http://192.168.0.161:4444/wd/hub"),options);
+               // String currentIP=CommonUtil.getIpAddress();
+               driver= new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),options);
                 LocalDriverContext.setRemoteWebDriverThreadLocal(driver);
                 break;
             }
             case Firefox:
             {
                 //Open the browser
-                System.setProperty("webdriver.gecko.driver", "C:\\chromedriver\\geckodriver.exe");
-                WebDriverManager.firefoxdriver().setup();
+                //System.setProperty("webdriver.gecko.driver", "C:\\chromedriver\\geckodriver.exe");
+                WebDriverManager.firefoxdriver().browserInDocker().setup();
                 FirefoxOptions options=new FirefoxOptions();
 
-               driver= new RemoteWebDriver(new URL(Settings.SeleniumGridHub),options);
+               driver= new RemoteWebDriver(new URL("http://192.168.29.13:4444/wd/hub"),options);
                 LocalDriverContext.setRemoteWebDriverThreadLocal(driver);
                 break;
             }
@@ -80,7 +84,13 @@ public class FrameworkInitialize extends Base {
                 break;
             }
             case Safari:
+                WebDriverManager.safaridriver().setup();
+                SafariOptions options=new SafariOptions();
+
+                driver= new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),options);
+                LocalDriverContext.setRemoteWebDriverThreadLocal(driver);
                 break;
+
         }
     }
 

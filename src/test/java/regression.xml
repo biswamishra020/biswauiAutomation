@@ -3,7 +3,7 @@
 <suite name="Regression" parallel="tests" thread-count="2">
     <test name="Test - 1" parallel="tests">
         <classes>
-            <class name="gtl.GtlTest">
+            <class name="demotest.DemoTest">
                 <methods>
                     <include name="test1" />
                 </methods>
@@ -12,7 +12,7 @@
     </test>
     <test name="Test - 2" parallel="tests">
         <classes>
-            <class name="gtl.GtlTest">
+            <class name="demotest.DemoTest">
                 <methods>
                     <include name="test2" />
                 </methods>
