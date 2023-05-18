@@ -33,4 +33,4 @@ jobs:
           java-version: 11
 
       - name: Run selenium test
-        run: mvn clean test -Psmoke.xml -Dbrowser=chrome
+        run: mvn clean test -DsuiteXmlFile=smoke.xml -Dbrowser=chrome
